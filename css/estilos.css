@@ -1,0 +1,113 @@
+#contenedor {
+    background-color: #fff8f0;
+    font: 'Times New Roman', serif;
+    font-size: 16px;
+}
+
+div.encabezado {
+    background: url('../imgs/guesteaus.png') center/cover no-repeat;
+    color: #5a3e36;
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    text-align: center;
+    height: 75px;
+    position: relative;
+}
+
+div.encabezado::before {
+    content: "";
+    background: url('../imgs/favicon.png') center/contain no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 30%;
+    left: 2px;
+}
+
+
+div.menu ul li a {
+    background-color: #a77e58;
+    color: #ffffff;
+    font: 'Helvetica', sans-serif;
+    font-size: 18px;
+}
+
+div.menu a:hover {
+    background-color: #8b6f47;
+}
+
+div.contenido {
+    background-color: #ecdcc6;
+    color: #5a3e36;
+    font: 'Georgia',serif;
+    font-size: 18px;
+}
+
+div.sidebar {
+    background-color: #ecdcc6;
+    color: #5e3e36;
+    font: 'Georgia',serif;
+    font-size: 18px;
+}
+
+div.pie {
+    background-color: #5a3e36;
+    color: #ecdcc6;
+    font: 'Helvetica', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+}
+
+div.pie2 {
+    background-color: #a77e58;
+    font: 'Helvetica', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+}
+div.pie2 ul {
+    list-style-type: none;
+}
+
+div.pie2 a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+div.pie2 ul li a:hover {
+    background-color: #8b6f47;
+    color: #5a3e36;
+    text-decoration: underline;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.pie2-cambio {
+    cursor: pointer;
+    color: #5a3e36;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    background-color: #a77e58;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+input[type="checkbox"]:checked ~ .pie2 {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+    div.pie2 {
+        display: none;
+    }
+
+    input[type="checkbox"]:checked ~ .pie2 {
+        display: flex;
+        flex-direction: column;
+    }
+}   
