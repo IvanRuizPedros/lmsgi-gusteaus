@@ -69,35 +69,11 @@ div.pie {
     clear: both;
 }
 
-div.pie2 {
-    background-color: #a77e58;
-    font: 'Helvetica', sans-serif;
-    font-size: 18px;
-    text-align: center;
-    padding: 10px;
-    clear: both;
-}
-div.pie2 ul {
-    list-style-type: none;
-}
-
-div.pie2 a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-div.pie2 ul li a:hover {
-    background-color: #8b6f47;
-    color: #5a3e36;
-    text-decoration: underline;
-}
-
 input[type="checkbox"] {
     display: none;
 }
 
-.pie2-cambio {
+.menu-cambio {
     cursor: pointer;
     color: #5a3e36;
     font-size: 18px;
@@ -109,16 +85,16 @@ input[type="checkbox"] {
     float: left;
 }
 
-input[type="checkbox"]:checked ~ .pie2 {
+input[type="checkbox"]:checked ~ .menu {
     display: block;
 }
 
 @media screen and (max-width: 600px) {
-    div.pie2 {
+    div.menu {
         display: none;
     }
 
-    input[type="checkbox"]:checked ~ .pie2 {
+    input[type="checkbox"]:checked ~ .menu {
         display: flex;
         flex-direction: column;
     }
