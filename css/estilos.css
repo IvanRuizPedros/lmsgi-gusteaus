@@ -35,6 +35,10 @@ div.encabezado::before {
     left: 2px;
 }
 
+div.encabezado img:hover,
+div.encabezado::before img:hover {
+    transform: scale(1.05);
+}
 
 div.menu ul li a {
     background-color: #a77e58;
@@ -48,6 +52,7 @@ div.menu ul li a:hover {
     background-color: #8b6f47;
     color: #5a3e36;
     font-size: 20px;
+    transform: rotate(2deg);
 }
 
 div.menu ul {
@@ -79,6 +84,10 @@ div.contenido {
     width: 70%;
     padding: 15px;
     margin: 7px;
+}
+
+div.contenido h2 {
+    transform: skew(0, -5deg);
 }
 
 div.sidebar {
@@ -198,4 +207,15 @@ div.encabezado,
 div.encabezado::before,
 div.menu a {
     transition: color 0.3s ease, background-color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.menu-cambio:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+div.menu ul li a,
+div.encabezado::before,
+.menu-cambio,
+div.contenido h2 {
+    transition: transform 0.3s ease;
 }
