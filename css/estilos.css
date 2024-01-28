@@ -13,6 +13,16 @@ div.encabezado {
     text-align: center;
     height: 75px;
     position: relative;
+    animation: zoomAnimation 10s infinite alternate;
+}
+
+@keyframes zoomAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
 }
 
 div.encabezado::before {
@@ -31,6 +41,13 @@ div.menu ul li a {
     color: #ffffff;
     font: 'Helvetica', sans-serif;
     font-size: 18px;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+div.menu ul li a:hover {
+    background-color: #8b6f47;
+    color: #5a3e36;
+    font-size: 20px;
 }
 
 div.menu ul {
@@ -73,6 +90,13 @@ div.sidebar {
     width: 30%;
     padding: 15px;
     margin: 7px;
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+div.sidebar:hover {
+    background-color: #8b6f47;
+    color: #ffffff;
+    transform: scale(1.1);
 }
 
 div.pie {
@@ -85,35 +109,11 @@ div.pie {
     clear: both;
 }
 
-div.pie2 {
-    background-color: #a77e58;
-    font: 'Helvetica', sans-serif;
-    font-size: 18px;
-    text-align: center;
-    padding: 10px;
-    clear: both;
-}
-div.pie2 ul {
-    list-style-type: none;
-}
-
-div.pie2 a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-div.pie2 ul li a:hover {
-    background-color: #8b6f47;
-    color: #5a3e36;
-    text-decoration: underline;
-}
-
 input[type="checkbox"] {
     display: none;
 }
 
-.pie2-cambio {
+.menu-cambio {
     cursor: pointer;
     color: #5a3e36;
     font-size: 18px;
@@ -125,16 +125,16 @@ input[type="checkbox"] {
     float: left;
 }
 
-input[type="checkbox"]:checked ~ .pie2 {
+input[type="checkbox"]:checked ~ .menu {
     display: block;
 }
 
 @media screen and (max-width: 600px) {
-    div.pie2 {
+    div.menu {
         display: none;
     }
 
-    input[type="checkbox"]:checked ~ .pie2 {
+    input[type="checkbox"]:checked ~ .menu {
         display: flex;
         flex-direction: column;
     }
@@ -183,7 +183,7 @@ input[type="checkbox"]:checked ~ .pie2 {
         padding: 10px;
     }
 
-    div.pie2 {
+    div.menu {
         padding: 5px;
     }
 }
@@ -196,7 +196,6 @@ div.menu ul {
 
 div.encabezado,
 div.encabezado::before,
-div.menu a,
-div.pie2 a {
+div.menu a {
     transition: color 0.3s ease, background-color 0.3s ease, text-decoration 0.3s ease;
 }
