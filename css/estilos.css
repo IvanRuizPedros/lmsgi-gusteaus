@@ -219,3 +219,53 @@ div.encabezado::before,
 div.contenido h2 {
     transition: transform 0.3s ease;
 }
+
+#formulario-reserva {
+    background-color: #fff8f0;
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #a77e58;
+    border-radius: 5px;
+}
+
+#formulario-reserva label {
+    font-size: 16px;
+}
+
+#formulario-reserva input[type='text'],
+#formulario-reserva input[type='email'],
+#formulario-reserva input[type='telefono'],
+#formulario-reserva input[type='number'],
+#formulario-reserva input[type='date'],
+#formulario-reserva input[type='time'],
+#formulario-reserva textarea {
+    border: 1px solid #a77e58;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#formulario-reserva input[type='submit'] {
+    background-color: #5a3e36;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#formulario-reserva input[type='submit']:hover {
+    background-color: #a77e58;
+}
+
+#formulario-reserva textarea {
+    width: 100%;
+}
+
+/* Estilos para etiquetas */
+#formulario-reserva label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
