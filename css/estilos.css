@@ -2,6 +2,7 @@
     background-color: #fff8f0;
     font: 'Times New Roman', serif;
     font-size: 16px;
+    overflow: hidden;
 }
 
 div.encabezado {
@@ -41,6 +42,10 @@ div.contenido {
     color: #5a3e36;
     font: 'Georgia',serif;
     font-size: 18px;
+    float: left;
+    width: 70%;
+    padding: 15px;
+    margin: 7px;
 }
 
 div.sidebar {
@@ -48,6 +53,10 @@ div.sidebar {
     color: #5e3e36;
     font: 'Georgia',serif;
     font-size: 18px;
+    float: right;
+    width: 30%;
+    padding: 15px;
+    margin: 7px;
 }
 
 div.pie {
@@ -57,6 +66,7 @@ div.pie {
     font-size: 16px;
     text-align: center;
     padding: 10px;
+    clear: both;
 }
 
 div.pie2 {
@@ -65,6 +75,7 @@ div.pie2 {
     font-size: 18px;
     text-align: center;
     padding: 10px;
+    clear: both;
 }
 div.pie2 ul {
     list-style-type: none;
@@ -95,6 +106,7 @@ input[type="checkbox"] {
     background-color: #a77e58;
     border-radius: 5px;
     margin-top: 10px;
+    float: left;
 }
 
 input[type="checkbox"]:checked ~ .pie2 {
@@ -110,4 +122,5 @@ input[type="checkbox"]:checked ~ .pie2 {
         display: flex;
         flex-direction: column;
     }
-}   
+    
+}
